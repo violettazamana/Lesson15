@@ -1,6 +1,6 @@
-package com.mobile.myapplication
+package com.mobile.myapplication.utils
 
-import android.util.Log
+import com.mobile.myapplication.model.Person
 
 class PersonForServer(
     val name: String,
@@ -10,8 +10,8 @@ class PersonForServer(
 fun PersonForServer.getViewName() = "$name $age"
 
 val arrayList = arrayListOf<Person>(
-    Person(firstName = "Zlata", age = 29),
-    Person(firstName = "Marina", age = 18)
+    com.mobile.myapplication.model.Person(firstName = "Zlata", age = 29),
+    com.mobile.myapplication.model.Person(firstName = "Marina", age = 18)
 )
 var arrayList1 = emptyList<Person>()
 val set1 = setOf<Person>()
@@ -19,7 +19,7 @@ val map1 = mapOf<String, Person>()
 
 fun initList() {
     val list = emptyList<Person>()
-    arrayList.add(Person(firstName = "Egor", age = 25))
+    arrayList.add(com.mobile.myapplication.model.Person(firstName = "Egor", age = 25))
     arrayList1 = list
     OurSingleton.mapOfDayUsages.firstOrNull()
     arrayList.filter { it.age!! > 21 }
@@ -29,7 +29,7 @@ fun initList() {
     arrayList.forEach {
 
     }
-    val person1 = Person("qweqwe", "wadas", "", 12)
+    val person1 = com.mobile.myapplication.model.Person("qweqwe", "wadas", "", 12)
     val listPersonForServer = arrayListOf<PersonForServer>()
     listPersonForServer.addAll(arrayList.filter { it.age!! > 21 }.map {
         PersonForServer(

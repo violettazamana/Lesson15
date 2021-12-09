@@ -1,14 +1,25 @@
 package com.mobile.myapplication
 
+import com.mobile.myapplication.model.Person
+
 class SleepPeople() {
 
     var person4: Person? = null
 
     fun new() {
+
+        val pr = when{
+            "".equals("")->{
+                Person()
+            }
+            else->{
+                Person()
+            }
+        }
         sleep(name = "Ilona")
         val lkj: Int = sum(1, 2)
         withParLamda(1, { qwqwedswad, a -> sum1 }, {})
-        val person1 = Person()
+        val person1 = com.mobile.myapplication.model.Person()
         person1.firstName = "Ilona"
         person1.lastName = "Sosna"
         person1.age = 18
@@ -18,7 +29,7 @@ class SleepPeople() {
         person4?.apply {
 
         }
-        val person2 = Person().apply {
+        val person2 = com.mobile.myapplication.model.Person().apply {
             firstName = "Evgeniy"
             lastName = "Poznyak"
             age = 18
